@@ -1,7 +1,8 @@
 import angular from 'angular';
-import sampleModule from './app/sample-module';
+import router from '@uirouter/angularjs';
+import loginModule from './app/login';
 
-var app = angular.module('myApp', [sampleModule.name]);
+var app = angular.module('myApp', [router, loginModule.name]);
 
 // here i am bootstrapping the angular application
-angular.bootstrap(document.getElementById('myApp'), [app.name]);
+angular.bootstrap(document, [app.name]);
