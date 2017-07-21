@@ -13,3 +13,5 @@ angular training for bijin
 - angular.bootstrap
 - angular.module
 - angular.controller
+- ui.router
+- angular.component
