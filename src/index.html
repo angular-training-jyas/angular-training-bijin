@@ -8,16 +8,7 @@
 </head>
 
 <body>
-    <div ng-controller="sampleController">
-        <input type="text" placeholder="Please enter.." ng-model="obj.name"/><br>
-        <span>Result: </span>
-        <span ng-bind="obj.name"></span>   
-    </div>
-    <div>
-        <input type="text" placeholder="Please enter.." /><br>
-        <span>Result: </span>
-        <span></span>   
-    </div>
+    <ui-view></ui-view>
 </body>
 
 </html>

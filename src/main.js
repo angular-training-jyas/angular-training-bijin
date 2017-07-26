@@ -1,8 +1,14 @@
 import angular from 'angular';
-// we import sample module here
-import sampleModule from './app/sample-module';
+// here we are importing the ui router module
+import router from '@uirouter/angularjs';
 
-var app = angular.module('myApp', [sampleModule.name]);
+// we import sample module here
+// these are my sub modules
+import sampleModule from './app/sample';
+import loginModule from './app/login';
+
+// router module is added as a dependency to the main application module
+let app = angular.module('myApp', [router, sampleModule.name, loginModule.name]);
 
 // here i am bootstrapping the angular application
 angular.bootstrap(document, [app.name]);
