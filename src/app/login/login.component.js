@@ -1,5 +1,8 @@
+import LoginController from './login.controller';
+
 let loginComponent = {
-    template: '<h1>Welcome to login page</h1>'
+    templateUrl: './template/src/app/login/login.tpl.html',
+    controller: LoginController
 };
 
 export default loginComponent;

@@ -2,8 +2,10 @@ var sampleController = ['$scope', function ($scope) {
     // 1. this is the data model
     // 2. here we are binding the data model with the $scope
     // 3. $scope.obj is the custom key name
-    $scope.obj = {
-        "name": "RTST"
+    $scope = {
+        'obj': {
+            "name": "RTST"
+        }
     };
 }];
 
