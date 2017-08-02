@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row" ng-if="$ctrl.messages.length > 0">
+        <div class="col-sm-12">
+            <div class="alert alert-info" ng-repeat="message in $ctrl.messages">
+                <span ng-bind="message"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+            <div class="form">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" ng-model="$ctrl.user.name">
+                </div>
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" class="form-control" ng-model="$ctrl.user.username">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="text" class="form-control" ng-model="$ctrl.user.password">
+                </div>
+                <div class="form-group">
+                    <label>Retype Password</label>
+                    <input type="password" class="form-control" ng-model="$ctrl.user.retypepassword">
+                </div>
+                <div class="form-group">
+                    <label class="radio-inline">
+                        <input type="radio" ng-model="$ctrl.user.gender" value="male"> Male
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" ng-model="$ctrl.user.gender" value="female"> Female
+                    </label>
+                </div>
+                <div class="form-group">
+                    <submit class="btn btn-primary" ng-click="$ctrl.save()">Save</submit>
+                </div>
+                <a ui-sref="login">Go to login page</a>
+            </div>
+        </div>
+    </div>
+</div>

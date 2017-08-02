@@ -3,9 +3,9 @@
 let loginConfig = ($stateProvider, $urlRouterProvider) => {
     $stateProvider
         .state({
-            name: 'login',
-            url: '/login',
-            template: '<login></login>'
+            'name': 'login',
+            'url': '/login',
+            'template': '<login></login>' // login component is created in login module. see login/index.js
         });
 
     $urlRouterProvider.otherwise('/login');
