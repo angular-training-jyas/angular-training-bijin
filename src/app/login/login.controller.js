@@ -13,7 +13,7 @@ class LoginController {
         }
         let isValidUser = this.validate(user);
         // calling userService to authenticate the user
-        if (isValidUser == true) {
+        if (isValidUser) {
             if (this.userService.authenticate(user)) {
                 this.message = 'User is valid';
             } else {
@@ -23,6 +23,7 @@ class LoginController {
     }
 
     validate(user) {
+        // here you can have your own validations. such as string or a rule validation
         if (user.username == '' || user.password == '') {
             this.message = 'Username & Password should not be empty';
             return false;

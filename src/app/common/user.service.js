@@ -3,11 +3,20 @@ class UserService {
     constructor($http) {
         this.$http = $http;
         this.validUsers = [{
+            'name': 'rani',
             'username': 'rani',
-            'password': 'rani'
+            'password': 'rani',
+            'gender': 'female'
         }, {
+            'name': 'jyasveer',
             'username': 'jyasveer',
-            'password': 'jyasveer'
+            'password': 'jyasveer',
+            'gender': 'male'
+        }, {
+            'name': 'bijin',
+            'username': 'bijin',
+            'password': 'bijin',
+            'gender': 'male'
         }];
     }
 
@@ -22,6 +31,11 @@ class UserService {
             }
         });
         return isValid;
+    }
+
+    add(user) {
+        this.validUsers.push(user);
+        return true;
     }
 }
 
