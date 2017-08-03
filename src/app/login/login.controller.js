@@ -1,5 +1,7 @@
 class LoginController {
-    constructor(userService) {
+    // $state is a service available form router module. helps us in navigating to a state
+    constructor($state, userService) {
+        this.$state = $state;
         this.userService = userService;
         this.username = '';
         this.password = '';
@@ -16,6 +18,7 @@ class LoginController {
         if (isValidUser) {
             if (this.userService.authenticate(user)) {
                 this.message = 'User is valid';
+                this.$state.go('dashboard');
             } else {
                 this.message = 'We dont find you. Please register and try again';
             }

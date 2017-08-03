@@ -21,7 +21,7 @@ class RegisterController {
                 'gender': this.user.gender
             };
 
-            let isValidAdd = this.userService.add(userToSave);
+            let isValidAdd = this.userService.addUser(userToSave);
             if(isValidAdd){
                 this.messages.push('User successfully added.');
             }

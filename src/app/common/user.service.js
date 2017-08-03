@@ -25,6 +25,7 @@ class UserService {
         console.log("user", user);
         let isValid = false;
         // "() => {}" this is the ES6 way of writing a function
+        // item , index are custom names for arguments. ES5 way of writing is function(item, index){}
         this.validUsers.forEach((item, index) => {
             if (user.username === item.username && user.password === item.password) {
                 isValid = true;
@@ -33,9 +34,14 @@ class UserService {
         return isValid;
     }
 
-    add(user) {
+    addUser(user) {
         this.validUsers.push(user);
         return true;
+    }
+
+    getAllUsers(){
+        // practically you call the server here to get all the users registered
+        return this.validUsers;
     }
 }
 
